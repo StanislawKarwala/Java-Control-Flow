@@ -30,47 +30,80 @@ public class Zad26 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input the number: ");
         int n = sc.nextInt();
-        int count = 1;
-        int count2 = 1;
-        char c = 'A';
 
-        for (int i = 1; i < (n * 2); i++)
-        {
-            for (int spc = n - count2; spc > 0; spc--)
-            //print space
-            {
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= n - i; j++) {
                 System.out.print(" ");
             }
-            if (i < n)
-            {
-                count2++;
+            for(int j = 1; j <= i; j++) {
+                System.out.print((char)('A' + j - 1));
             }
-            else
-            {
-                count2--;
+            for(int j = i - 1; j >= 1; j--) {
+                System.out.print((char)('A' + j - 1));
             }
-            for (int j = 0; j < count; j++)
-            {
-                System.out.print(c);//print Character
-                if (j < count / 2)
-                {
-                    c++;
-                } else
-                {
-                    c--;
-                }
-            }
-            if (i < n)
-            {
-                count = count + 2;
-            }
-            else
-            {
-                count = count - 2;
-            }
-            c = 'A';
+            System.out.println();
+        }
 
+        for(int i = n - 1; i >= 1; i--){
+            for(int j = 1; j <= n - i; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= i; j++) {
+                System.out.print((char)('A' + j - 1));
+            }
+            for(int j = i - 1; j >= 1; j--) {
+                System.out.print((char)('A' + j - 1));
+            }
             System.out.println();
         }
     }
 }
+
+//        for(int i = 0; i < n; i++){
+//            for(int j = 1; j <= n - i; j++){
+//                System.out.print(" ");
+//            }
+//        }
+
+//        int count = 1;
+//        int count2 = 1;
+//        char c = 'A';
+//
+//        for (int i = 1; i < (n * 2); i++)
+//        {
+//            for (int spc = n - count2; spc > 0; spc--)
+//            //print space
+//            {
+//                System.out.print(" ");
+//            }
+//            if (i < n)
+//            {
+//                count2++;
+//            }
+//            else
+//            {
+//                count2--;
+//            }
+//            for (int j = 0; j < count; j++)
+//            {
+//                System.out.print(c);//print Character
+//                if (j < count / 2)
+//                {
+//                    c++;
+//                } else
+//                {
+//                    c--;
+//                }
+//            }
+//            if (i < n)
+//            {
+//                count = count + 2;
+//            }
+//            else
+//            {
+//                count = count - 2;
+//            }
+//            c = 'A';
+//
+//            System.out.println();
+//        }

@@ -23,18 +23,29 @@ public class Zad24 {
         System.out.print("Input the number: ");
         int n = in.nextInt();
 
-        for (int i = 0; i < n; i++)
-        {
-            for (int spc = n - i; spc > 0; spc--)
-            {
+        for(int i = 1; i <= n; i++){
+            for(int j = n - i; j >= 1; j--){
                 System.out.print(" ");
             }
-            for (int j = 0; j <= i; j++)
-            {
+            for(int k = 1; k <= i; k++){
                 System.out.print("@");
             }
             System.out.println();
         }
+
+
+//        for (int i = 0; i < n; i++)
+//        {
+//            for (int spc = n - i; spc > 0; spc--)
+//            {
+//                System.out.print(" ");
+//            }
+//            for (int j = 0; j <= i; j++)
+//            {
+//                System.out.print("@");
+//            }
+//            System.out.println();
+//        }
     }
 }
 

@@ -30,44 +30,30 @@ public class Zad25 {
         Scanner in = new Scanner(System.in);
         System.out.print("Input the number:  ");
         int n = in.nextInt();
-        int count = 1;
-        int no_of_spaces = 1;
-        int start = 0;
 
-        for (int i = 1; i < (n * 2); i++)
-        {
-
-            for (int spc = n - no_of_spaces; spc > 0; spc--)
-            {
+        for(int i = 1; i <= n; i++){
+            for(int j = n - i - 1; j >= 0; j--){
                 System.out.print(" ");
             }
-            if (i < n)
-            {
-                start = i;          //for number
-                no_of_spaces++;    //for spaces
-            } else
-            {
-                start = n * 2 - i;   //for number
-                no_of_spaces--;      //for space
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j);
             }
-            for (int j = 0; j < count; j++)
-            {
-                System.out.print(start);
-                if (j < count / 2)
-                {
-                    start--;
-                } else
-                {
-                    start++;
-                }
+            for (int j = 2; j <= i; j++) {
+                System.out.print(j);
             }
-            if (i < n)
-            {
-                count = count + 2;
-            } else {
-                count = count - 2;
-            }
+            System.out.println();
+        }
 
+        for(int i = n - 1; i >= 1; i--){
+            for(int j = 1; j <= n - i; j++){
+                System.out.print(" ");
+            }
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j);
+            }
+            for (int j = 2; j <= i; j++) {
+                System.out.print(j);
+            }
             System.out.println();
         }
     }

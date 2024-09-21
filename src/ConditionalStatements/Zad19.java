@@ -10,8 +10,8 @@ Write a Java program to make such a pattern like a pyramid with a number that re
 
 public class Zad19 {
     public static void main(String[] args) {
-        int number = 4;
-        int s = number + 4 - 1;
+        int number = 9;
+        int s = number;
 
         for(int i = 1; i <= number; i++){
             for(int j = s; j != 0; j--){
