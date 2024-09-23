@@ -9,7 +9,6 @@ public class Zad6 {
         if(word.isEmpty() || word.length() == 1){
             return word;
         }
-
         return recursiveReverse(word.substring(1)) + word.charAt(0);
     }
 

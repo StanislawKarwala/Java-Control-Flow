@@ -10,12 +10,14 @@ public class Zad7 {
         if(b == 0){
             return a;
         }
+        System.out.println("A: " + a);
+        System.out.println("B: " + b);
         return greatestCommonDivisor(b, a % b);
     }
 
     public static void main(String[] args) {
-        int a = 16;
-        int b = 176;
+        int a = 25;
+        int b = 15;
         System.out.println(greatestCommonDivisor(a, b));
     }
 }
